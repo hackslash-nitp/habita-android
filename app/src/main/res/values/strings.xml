@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">Habita</string>
+    <string name="scan">Add Ingredient</string>
+    <string name="receipe">Find Receipe</string>
+    <string name="notyet">Not plan yet</string>
+    <string name="food">Food</string>
+    <string name="food_name">Ingredient Name</string>
+    <string name="quantity">Quantity</string>
+    <string name="remove">X</string>
+    <string name="Done">Done</string>
+    <string name="Enter">Enter Quantity</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

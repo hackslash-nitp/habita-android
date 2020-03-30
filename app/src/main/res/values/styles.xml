@@ -13,4 +13,46 @@
     </style>
 
 
+        <style name="scan_ingred">
+
+            <item name="android:textSize">
+                16sp
+            </item>
+
+            <item name="android:textColor">
+                #000000
+            </item>
+
+
+        </style>
+        <style name="not_plan_ye">
+
+            <item name="android:textSize">
+                16sp
+            </item>
+
+            <item name="android:textColor">
+                #FFFFFF
+            </item>
+
+        </style>
+        <!--
+        Font family: Raleway
+        Line height: 28sp
+      -->
+        <!-- styles.xml -->
+        <style name="food">
+
+            <item name="android:textSize">
+                24sp
+            </item>
+
+            <item name="android:textColor">
+                #000000
+            </item>
+
+        </style>
+
+
+
 </resources>
