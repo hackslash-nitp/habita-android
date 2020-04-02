@@ -9,7 +9,7 @@
     <ImageView
         android:layout_weight="1"
         android:layout_width="wrap_content"
-        android:layout_height="358dp"
+        android:layout_height="300dp"
         android:padding="25dp"
         android:src="@drawable/splash_screen" />
 
@@ -36,6 +36,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
+        app:slider_height="55dp"
+        app:icon_margin="8dp"
+        android:id="@+id/slidelogin"
         app:outer_color="#00BFA6"
         app:text_size="20dp"
         />
