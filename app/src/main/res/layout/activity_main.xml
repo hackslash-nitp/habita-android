@@ -73,7 +73,6 @@
         android:id="@+id/energy"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:src="@drawable/energy_"
         android:scaleType="centerCrop"/>
     <TextView
         android:layout_width="160dp"
@@ -125,7 +124,7 @@
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/waste" />
+         />
     <TextView
         android:layout_width="160dp"
         android:layout_height="160dp"

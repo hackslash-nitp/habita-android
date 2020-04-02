@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f7f7f7">
+
+    <ImageView
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:padding="25dp"
+        android:src="@drawable/splash_screen" />
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:fontFamily="@font/rancho"
+        android:gravity="center_horizontal"
+        android:text="Habita"
+        android:textColor="#00BFA6"
+        android:textSize="120sp" />
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The complete sustainable home"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        />
+    <com.ncorti.slidetoact.SlideToActView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:slider_height="55dp"
+        app:icon_margin="8dp"
+        android:id="@+id/slidelogin"
+        app:outer_color="#00BFA6"
+        app:text_size="20dp"
+        />
+</LinearLayout>
