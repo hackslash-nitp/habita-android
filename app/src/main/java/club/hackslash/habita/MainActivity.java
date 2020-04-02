@@ -14,12 +14,12 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import static android.widget.Toast.LENGTH_SHORT;
 
 
@@ -27,7 +27,8 @@ import static android.widget.Toast.LENGTH_SHORT;
 public class MainActivity extends AppCompatActivity {
     ImageView imgprofile;
     TextView notyet;
-    Button btnask,receipe;
+    Button btnask;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,15 +37,16 @@ public class MainActivity extends AppCompatActivity {
 
 
         imgprofile = findViewById(R.id.imgprofile);
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.pubg);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.persontab);
         RoundedBitmapDrawable roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(getResources(),bitmap);
         roundedBitmapDrawable.setCircular(true);
         imgprofile.setImageDrawable(roundedBitmapDrawable);
 
         notyet = findViewById(R.id.notyet);
         btnask  = findViewById(R.id.AskPer);
-        receipe = findViewById(R.id.receipe);
-        receipe.setVisibility(View.GONE);
+
+
+
 
         btnask.setOnClickListener(new View.OnClickListener(){
 
@@ -65,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
                 else {
                     Intent intent = new Intent(MainActivity.this,club.hackslash.habita.camStart.class);
-                    startActivityForResult(intent,22);
+                    startActivity(intent);
                 }
             }
         } );
@@ -78,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
             //&& grantResults[0] == ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA)) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(MainActivity.this, "THANK YOU,PERMISSION GRANTED!!", LENGTH_SHORT).show();
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, 22);
+                Intent intent = new Intent(MainActivity.this,club.hackslash.habita.camStart.class);
+                startActivity(intent);
             } else if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
                 if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this, Manifest.permission.CAMERA)) {
                     AlertDialog.Builder dialog = new AlertDialog.Builder(this);
@@ -112,20 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, final Intent data){
-        super.onActivityResult(requestCode,resultCode,data);
-        if(requestCode == 22)  {
-            if(resultCode == RESULT_OK){
-                Toast.makeText(MainActivity.this,"Scan Successfully", LENGTH_SHORT).show();
 
-            }
-            else{
-                Toast.makeText(MainActivity.this,"Not Scan", LENGTH_SHORT).show();
-            }
-
-        }
-    }
 
 }
 

@@ -48,12 +48,11 @@
 
     <ImageView
         android:id="@+id/imgprofile"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_gravity="bottom"
 
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_weight="1"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,8 +60,8 @@
         app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
-        app:srcCompat="@drawable/pubg" />
+        app:layout_constraintVertical_bias="0.04000002"
+        app:srcCompat="@drawable/persontab" />
 
     <Button
         android:id="@+id/AskPer"
@@ -81,24 +80,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.803"
         tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/receipe"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:background="@drawable/box2"
-        android:gravity="center"
-        android:text="@string/receipe"
-        android:textAppearance="@style/scan_ingred"
-        android:textStyle="bold"
-        android:elevation="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AskPer"
-        app:layout_constraintVertical_bias="0.214" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
