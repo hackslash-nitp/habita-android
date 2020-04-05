@@ -66,7 +66,7 @@ public class recipe_adapter extends RecyclerView.Adapter<recipe_adapter.ViewHold
 
   @Override
     public void onBindViewHolder(@NonNull recipe_adapter.ViewHolder holder, int position) {
-        holder.itemView.setTag(recipelist.get(position));
+        holder.missIng.setTag(recipelist.get(position));
         holder.recipeName.setText(recipelist.get(position).getRecipe_name());
         holder.ava_ing.setText("Available Ingredient: "+recipelist.get(position).getAval_ing());
 

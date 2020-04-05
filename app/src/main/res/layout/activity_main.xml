@@ -99,16 +99,16 @@
         android:scaleType="centerCrop"
         android:src="@drawable/food"
         />
+
     <TextView
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:gravity="bottom"
-        android:text="Food\nManagement"
-        android:textColor="#fff"
-        android:textSize="20dp"
         android:paddingLeft="17dp"
         android:paddingBottom="6dp"
-        />
+        android:text="Food\nManagement"
+        android:textColor="#fff"
+        android:textSize="20dp" />
 
 </RelativeLayout>
 <RelativeLayout
