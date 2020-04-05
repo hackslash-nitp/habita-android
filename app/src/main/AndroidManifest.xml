@@ -13,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".foodActivity"></activity>
-        <activity android:name=".cameraActivity" />
         <activity android:name=".camStart" />
         <activity android:name=".MainActivity">
 

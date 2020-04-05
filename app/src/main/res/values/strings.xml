@@ -8,7 +8,7 @@
     <string name="food_name">Recipe Name</string>
     <string name="aval_ing">Available Ingredient</string>
     <string name="ing_ide">0 Ingredient Identified</string>
-    <string name="miss">0 Missing</string>
+    <string name = "miss">0 Missing</string>
     <string name="view_detail">View Details</string>
 
 
