@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp">
+
+
+    <TextView
+        android:id="@+id/garden_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Garden"
+        android:textColor="#000000"
+        android:textSize="34sp" />
+
+    <ImageView
+        android:id="@+id/imageView_profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_mother" />
+
+    <LinearLayout
+        android:id="@+id/end_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+        <Button
+            android:id="@+id/add_a_plant_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+
+            android:textAllCaps="false"
+            android:background="#00BFA6"
+            android:text="Add a plant"
+            android:textColor="@android:color/white"
+            />
+
+        <Button
+            android:id="@+id/water_plant"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:textColor="@android:color/white"
+
+
+            android:textAllCaps="false"
+            android:background="#3336FF"
+            android:text="Water all Plants"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/end_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="16dp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:background="#E91E1E"
+        android:text="Scan plants for diseases"
+        tools:ignore="HardcodedText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView"
+        android:layout_above="@id/button2"
+        android:layout_below="@id/garden_text_view"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginBottom="32dp"
+
+        android:text="No plants added"
+        android:scrollbars="vertical" />
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/garden_text_view"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="No plants yet" />
+
+
+
+
+</RelativeLayout>
