@@ -11,9 +11,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+  
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".foodActivity"></activity>
         <activity android:name=".camStart" />
+ 
         <activity android:name=".MainActivity">
 
         </activity>
@@ -24,10 +26,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+         <receiver android:name=".MyBattery">
+
+        </receiver>
+ 
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-    </application>
+     </application>
 
 </manifest>

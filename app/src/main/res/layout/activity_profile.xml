@@ -28,7 +28,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="107dp"
         android:layout_marginTop="79dp"
-        android:src="@drawable/profile" />
+         />
 
     <TextView
         android:id="@+id/textView2"
@@ -122,7 +122,7 @@
         android:layout_marginEnd="51dp"
         android:layout_marginRight="51dp"
         android:layout_marginBottom="10dp"
-        android:src="@drawable/img2" />
+         />
 
     <ImageButton
         android:layout_width="40dp"
@@ -130,6 +130,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="9dp"
-        />
+         />
+ 
 
 </RelativeLayout>
