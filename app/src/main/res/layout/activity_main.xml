@@ -2,6 +2,7 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E5E5E5"
@@ -20,10 +21,10 @@
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HOME"
+        android:text="Home"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:fontFamily="sans-serif-light"
+        android:fontFamily="@font/raleway_regular"
         android:layout_marginTop="47dp"
         android:layout_marginLeft="35dp"
         />
@@ -32,32 +33,39 @@
     android:layout_height="wrap_content"
     android:layout_below="@id/text1"
     android:id="@+id/handsoil"
-    android:layout_marginLeft="32dp"
-    android:layout_marginRight="7dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginEnd="7dp"
     android:layout_marginTop="72dp">
-    <ImageView
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:src="@drawable/soil"
-        android:scaleType="centerCrop"
-        />
+
+
+
+<ImageView
+            android:src="@drawable/soil_new"
+            android:scaleType="fitXY"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+
+            />
     <TextView
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:gravity="bottom"
         android:text="Garden\nManagement"
         android:textColor="#fff"
-        android:textSize="20dp"
-        android:paddingLeft="17dp"
+        android:textSize="20sp"
+        android:paddingStart="17dp"
         android:paddingBottom="6dp"
-        />
+        tools:ignore="RtlSymmetry" />
+
+
+
 </RelativeLayout>
 
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentRight="true"
-        android:src="@drawable/ic_mother"
+        android:src="@drawable/profile_icon"
         android:layout_marginTop="47dp"
         android:layout_marginRight="35dp"
         />
@@ -71,6 +79,7 @@
     android:layout_marginRight="32dp">
     <ImageView
         android:id="@+id/energy"
+        android:src="@drawable/energy"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:scaleType="centerCrop"/>
@@ -97,7 +106,7 @@
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/food"
+        android:src="@drawable/food1"
         />
     <TextView
         android:layout_width="160dp"
@@ -124,6 +133,7 @@
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:scaleType="centerCrop"
+        android:src="@drawable/recy"
          />
     <TextView
         android:layout_width="160dp"
@@ -156,6 +166,7 @@
         android:layout_marginLeft="35dp"
         android:layout_marginBottom="30dp"
         android:background="@drawable/radius"
+
         >
         <LinearLayout
             android:layout_width="wrap_content"
