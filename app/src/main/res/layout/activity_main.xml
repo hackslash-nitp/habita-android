@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E5E5E5"
+    android:background="#fff"
    >
 
     <com.ismaeldivita.chipnavigation.ChipNavigationBar
@@ -132,7 +132,7 @@
     android:layout_toRightOf="@id/food"
     android:layout_below="@id/text1"
     android:id="@+id/waste"
-    android:layout_marginLeft="7dp"
+    android:layout_marginLeft="0dp"
     android:layout_marginRight="32dp"
     android:layout_marginTop="246dp">
     <ImageView
@@ -143,16 +143,16 @@
         android:background="@drawable/gradient_d"
         android:alpha="0.7"
          />
+
     <TextView
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:gravity="bottom"
+        android:paddingLeft="15dp"
+        android:paddingBottom="6dp"
         android:text="Waste\nManagement"
         android:textColor="#fff"
-        android:textSize="20dp"
-        android:paddingBottom="6dp"
-        android:paddingLeft="15dp"
-        />
+        android:textSize="20dp" />
 </RelativeLayout>
     <TextView
         android:layout_width="wrap_content"
@@ -174,6 +174,7 @@
         android:layout_marginLeft="35dp"
         android:layout_marginBottom="30dp"
         android:background="@drawable/radius"
+
 
         >
         <LinearLayout
