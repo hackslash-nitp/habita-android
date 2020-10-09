@@ -86,6 +86,7 @@
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:alpha="0.7"
+        android:id="@+id/energy_img"
         android:background="@drawable/gradient_b"
         android:onClick="energy"
         android:scaleType="centerCrop"
@@ -107,7 +108,7 @@
     android:layout_below="@id/text1"
     android:id="@+id/food"
     android:background="?android:attr/selectableItemBackground"
-    android:layout_marginTop="246dp"
+    android:layout_marginTop="240dp"
     android:layout_marginLeft="32dp"
     android:layout_marginRight="7dp">
     <ImageView
@@ -138,7 +139,7 @@
     android:id="@+id/waste"
     android:layout_marginLeft="0dp"
     android:layout_marginRight="32dp"
-    android:layout_marginTop="246dp">
+    android:layout_marginTop="240dp">
     <ImageView
         android:layout_width="160dp"
         android:layout_height="160dp"
