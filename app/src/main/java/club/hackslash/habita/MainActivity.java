@@ -10,7 +10,9 @@ import android.graphics.RectF;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private MyBattery myBattery;
 
 
-    RelativeLayout food;
+    RelativeLayout food,energy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         myBattery = new MyBattery();
+
+
     }
 
     @Override
@@ -54,6 +58,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        energy =findViewById(R.id.energy);
+        energy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,EnergyScreen1.class));
+            }
+        });
+
+
+
 
     }
 
@@ -68,8 +82,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
     }
+
+
 }
 
 
