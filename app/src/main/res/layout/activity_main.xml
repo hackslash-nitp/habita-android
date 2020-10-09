@@ -45,7 +45,7 @@
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:alpha="0.7"
-            android:background="@drawable/gradient"
+            android:background="@drawable/gradient_a"
 
             />
     <TextView
@@ -76,17 +76,20 @@
     android:layout_height="wrap_content"
     android:layout_toRightOf="@id/handsoil"
     android:layout_below="@id/text1"
+    android:id="@+id/energy"
     android:layout_marginLeft="7dp"
     android:layout_marginTop="72dp"
-    android:layout_marginEnd="32dp">
+    android:layout_marginEnd="32dp"
+    android:background="?android:attr/selectableItemBackground">
+
     <ImageView
-        android:id="@+id/energy"
-        android:src="@drawable/energy"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:scaleType="centerCrop"
         android:alpha="0.7"
-        android:background="@drawable/gradient_b"/>
+        android:background="@drawable/gradient_b"
+        android:onClick="energy"
+        android:scaleType="centerCrop"
+        android:src="@drawable/energy" />
     <TextView
         android:layout_width="160dp"
         android:layout_height="160dp"
@@ -103,6 +106,7 @@
     android:layout_height="wrap_content"
     android:layout_below="@id/text1"
     android:id="@+id/food"
+    android:background="?android:attr/selectableItemBackground"
     android:layout_marginTop="246dp"
     android:layout_marginLeft="32dp"
     android:layout_marginRight="7dp">
