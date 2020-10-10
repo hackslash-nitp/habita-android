@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
     private MyBattery myBattery;
 
 
-    RelativeLayout food,energy;
+    RelativeLayout food;
+    ImageView energy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         myBattery = new MyBattery();
+        energy =findViewById(R.id.energy_img);
+        energy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent transfer=new Intent(MainActivity.this,EnergyScreen1.class);
+                startActivity(transfer);
+            }
+        });
 
 
     }
@@ -55,14 +64,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), foodActivity.class));
-            }
-        });
-
-        energy =findViewById(R.id.energy);
-        energy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,EnergyScreen1.class));
             }
         });
 
