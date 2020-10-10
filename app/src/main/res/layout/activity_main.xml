@@ -45,6 +45,7 @@
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:alpha="0.7"
+    android:id="@+id/garden"
             android:background="@drawable/gradient_a"
 
             />
@@ -76,7 +77,6 @@
     android:layout_height="wrap_content"
     android:layout_toRightOf="@id/handsoil"
     android:layout_below="@id/text1"
-    android:id="@+id/energy"
     android:layout_marginLeft="7dp"
     android:layout_marginTop="72dp"
     android:layout_marginEnd="32dp"
@@ -85,8 +85,8 @@
     <ImageView
         android:layout_width="160dp"
         android:layout_height="160dp"
+        android:id="@+id/energy"
         android:alpha="0.7"
-        android:id="@+id/energy_img"
         android:background="@drawable/gradient_b"
         android:onClick="energy"
         android:scaleType="centerCrop"

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     RelativeLayout food;
-    ImageView energy;
+    ImageView energy,garden;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         myBattery = new MyBattery();
-        energy =findViewById(R.id.energy_img);
+        energy =findViewById(R.id.energy);
         energy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +44,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(transfer);
             }
         });
+        garden =findViewById(R.id.garden);
+        garden.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent transfer=new Intent(MainActivity.this,GardenActivity.class);
+                startActivity(transfer);
+            }
+        });
+
 
 
     }
