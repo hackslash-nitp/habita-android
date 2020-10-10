@@ -87,7 +87,6 @@
         android:layout_height="160dp"
         android:id="@+id/energy"
         android:alpha="0.7"
-        android:id="@+id/energy_img"
         android:background="@drawable/gradient_b"
         android:onClick="energy"
         android:scaleType="centerCrop"
