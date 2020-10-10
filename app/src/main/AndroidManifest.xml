@@ -13,7 +13,10 @@
         android:supportsRtl="true"
   
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".foodActivity"></activity>
+        <activity android:name=".EnergyScreen1" />
+        <activity android:name=".GardenActivity" />
+
+        <activity android:name=".foodActivity" />
         <activity android:name=".camStart" />
  
         <activity android:name=".MainActivity">
