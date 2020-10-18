@@ -7,6 +7,10 @@ We will have different sections in the app namely food , garden and  energy sect
 The app will notify to readjust the light if required according to the light outside and according to the light required to do a particular task .For example, we would need more light while reading as compared to most of the other chores. Hence we should readjust the intensity of the light to the maximum while reading.<br>
 <h2> Screenshots</h2> 
 <img src = "ss.jpeg"  width=270 height=480 /><img src = "home.jpeg"  width=270 height=480/><img src = "food.jpeg" width=270 height=480/><img src = "garden.jpeg"  width=270 height=480><img src = "energy.jpeg"  width=270 height=480>
+<h2>Requirements</h2> 
+Minimum Android SDK: Habita requires a minimum API level of 23.
+Compile Android SDK: Habita requires you to compile against API 29 or later.
+
 <h2>  License</h2> 
 The MIT License (MIT)
 <h2>  Contributors</h2> 
