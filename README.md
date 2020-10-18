@@ -14,5 +14,5 @@ The MIT License (MIT)
   <img src="https://contributors-img.web.app/image?repo=hackslash-nitp/habita-android" />
 </a>
 
-Made with [contributors-img](https://contributors-img.web.app).
+Made with [contributors-img](https://contributors-img.web.app).<br>
 ❤️ Thanks to our awesome contributors.
