@@ -38,5 +38,19 @@
                 tools:layout="@layout/fragment_list" />
         -->
 
+            android:layout_height="0dp"
+            android:layout_weight="11"
+            android:padding="0dp"/>
+
+
+
+    <fragment
+        android:id="@+id/recipefrag"
+        android:name="club.hackslash.habita.List"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        tools:layout="@layout/fragment_list" />
+
 
 </LinearLayout>

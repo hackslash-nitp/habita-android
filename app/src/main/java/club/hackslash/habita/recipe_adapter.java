@@ -78,6 +78,7 @@ public class recipe_adapter extends RecyclerView.Adapter<recipe_adapter.ViewHold
       RoundedBitmapDrawable roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(maincontext.getResources(),bitmap);
       roundedBitmapDrawable.setCircular(true);
       holder.imgrecipe.setImageDrawable(roundedBitmapDrawable);
+
     }
 
     @Override

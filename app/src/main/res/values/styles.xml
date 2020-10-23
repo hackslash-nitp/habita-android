@@ -13,6 +13,7 @@
     </style>
 
 
+
         <style name="scan_ingred">
 
             <item name="android:textSize">
@@ -52,7 +53,6 @@
             </item>
 
         </style>
-
 
 
 </resources>

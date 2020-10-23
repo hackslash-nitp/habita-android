@@ -3,7 +3,9 @@ package club.hackslash.habita;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.hardware.Camera;
+
 import android.util.Log;
+
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
@@ -28,6 +30,7 @@ public class showCam extends SurfaceView implements SurfaceHolder.Callback {
         } catch (IOException e) {
             Log.d(" error in preview", "Error setting camera preview: " + e.getMessage());
         }
+
     }
 
     @Override
