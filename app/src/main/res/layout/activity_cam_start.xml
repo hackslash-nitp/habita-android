@@ -11,19 +11,32 @@
         <FrameLayout
             android:id="@+id/camFrame"
             android:layout_width="match_parent"
+           android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="0dp">
+
+
+        </FrameLayout>
+        <fragment
+            android:id="@+id/cambtnfrag"
+            android:name="club.hackslash.habita.bot_cam"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="11"
-            android:padding="0dp"/>
+            android:layout_weight="0.4"
+            tools:layout="@layout/fragment_bot_cam"
 
+            />
 
-
-    <fragment
-        android:id="@+id/recipefrag"
-        android:name="club.hackslash.habita.List"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10"
-        tools:layout="@layout/fragment_list" />
+        <!--
+        This is under comment
+               <fragment
+                android:id="@+id/recipefrag"
+                android:name="club.hackslash.habita.List"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                tools:layout="@layout/fragment_list" />
+        -->
 
 
 </LinearLayout>
