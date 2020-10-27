@@ -67,4 +67,4 @@ public class camStart extends AppCompatActivity  {
 
     }
 
-}
+

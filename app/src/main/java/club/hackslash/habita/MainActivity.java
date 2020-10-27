@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     RelativeLayout food;
     ImageView energy,garden;
 
-    RelativeLayout food;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
