@@ -27,6 +27,12 @@ public class New_blank extends AppCompatActivity {
         setContentView(R.layout.activity_new_blank);
 
         ChipNavigationBar navbar =findViewById(R.id.nav_bar);
+        if(savedInstanceState==null){
+            navbar.setItemSelected(R.id.home,true);
+            fragmentManager=getSupportFragmentManager();
+            Home home=new Home();
+            fragmentManager.beginTransaction().replace(R.id.fragment_container,home).commit();
+        }
         navbar.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
             @Override
             public void onItemSelected(int i) {
