@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".EnergyScreen1" />
         <activity android:name=".GardenActivity" />
-
+        <activity android:name=".New_blank"></activity>
         <activity android:name=".foodActivity" />
         <activity android:name=".camStart" />
  
