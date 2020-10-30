@@ -19,7 +19,7 @@ SlideToActView loginSlide;
         loginSlide.setOnSlideCompleteListener(new SlideToActView.OnSlideCompleteListener() {
             @Override
             public void onSlideComplete(SlideToActView slideToActView) {
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                startActivity(new Intent(getApplicationContext(),New_blank.class));
                 finish();
             }
         });

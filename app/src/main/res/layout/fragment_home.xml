@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cnb_menuResource="@menu/bottom_navigation"
+        android:gravity="center"
+        android:elevation="16dp"
+        android:background="#fff"
+        android:layout_alignParentBottom="true"/>
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/raleway_regular"
+        android:layout_marginTop="47dp"
+        android:layout_marginLeft="35dp"
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1"
+        android:id="@+id/handsoil"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginTop="72dp">
+
+
+
+        <ImageView
+            android:src="@drawable/soil_new"
+            android:scaleType="fitXY"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:alpha="0.7"
+            android:id="@+id/garden"
+            android:background="@drawable/gradient_a"
+
+            />
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:gravity="bottom"
+            android:text="Garden\nManagement"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:paddingStart="17dp"
+            android:paddingBottom="6dp"
+            tools:ignore="RtlSymmetry" />
+
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/profile_icon"
+        android:layout_marginTop="47dp"
+        android:layout_marginRight="35dp"
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/handsoil"
+        android:layout_below="@id/text1"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="32dp"
+        android:background="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:id="@+id/energy"
+            android:alpha="0.7"
+            android:background="@drawable/gradient_b"
+            android:onClick="energy"
+            android:scaleType="centerCrop"
+            android:src="@drawable/energy" />
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:gravity="bottom"
+            android:text="Energy\nManagement"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:paddingLeft="17dp"
+            android:paddingBottom="6dp"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1"
+        android:id="@+id/food"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginTop="240dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="7dp">
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/food1"
+            android:alpha="0.7"
+            android:background="@drawable/gradient_c"
+            />
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:gravity="bottom"
+            android:text="Food\nManagement"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:paddingLeft="17dp"
+            android:paddingBottom="6dp"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_toRightOf="@id/food"
+        android:layout_below="@id/text1"
+        android:id="@+id/waste"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="240dp">
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/recy"
+            android:background="@drawable/gradient_d"
+            android:alpha="0.7"
+            />
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:gravity="bottom"
+            android:paddingLeft="15dp"
+            android:paddingBottom="6dp"
+            android:text="Waste\nManagement"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Status"
+        android:layout_above="@id/bar2"
+        android:layout_marginLeft="38dp"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/bar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/nav_bar"
+        android:orientation="horizontal"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/radius"
+
+
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="30sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Plants added"
+                android:gravity="center"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="30sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Food items\nrecycled"
+                android:gravity="center"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="30sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Units of electricity \nsaved"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
