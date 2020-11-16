@@ -71,6 +71,7 @@ public class foodActivity extends AppCompatActivity {
                 }
             }
         } );
+
     }
 
     @Override

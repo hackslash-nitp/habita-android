@@ -79,7 +79,6 @@ public class recipe_adapter extends RecyclerView.Adapter<recipe_adapter.ViewHold
       roundedBitmapDrawable.setCircular(true);
       holder.imgrecipe.setImageDrawable(roundedBitmapDrawable);
 
-
     }
 
     @Override

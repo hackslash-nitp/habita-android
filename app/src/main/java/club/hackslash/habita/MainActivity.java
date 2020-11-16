@@ -1,6 +1,13 @@
 package club.hackslash.habita;
 
 
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.RelativeLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -21,6 +28,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 
+
 public class MainActivity extends AppCompatActivity {
     private MyBattery myBattery;
 
@@ -35,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
+
+        food=findViewById(R.id.food);
+        food.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),foodActivity.class));
+            }
+        });
+        
         myBattery = new MyBattery();
         energy =findViewById(R.id.energy);
         energy.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(transfer);
             }
         });
-
 
 
     }
@@ -96,14 +112,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
-
-
-
-
-
-
-
-
 
 
 
