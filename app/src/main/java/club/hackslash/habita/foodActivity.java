@@ -7,35 +7,50 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
-
+import java.util.Random;
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+
 import static android.widget.Toast.LENGTH_SHORT;
 
 public class foodActivity extends AppCompatActivity {
 
-    ImageView imgprofile;
+    ImageView imgprofile,foodImage;
     TextView notyet;
     Button btnask;
-
+    private StorageReference foodImageRef;
+    private  int CAMERACODE = 7777;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.food_scanner);
 
-
+        foodImage = findViewById(R.id.foodimage);
+        foodImage.setVisibility(View.GONE);
         imgprofile = findViewById(R.id.imgprofile);
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.persontab);
         RoundedBitmapDrawable roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(getResources(),bitmap);
@@ -67,7 +82,7 @@ public class foodActivity extends AppCompatActivity {
 
                 else {
                     Intent intent = new Intent(club.hackslash.habita.foodActivity.this,club.hackslash.habita.camStart.class);
-                    startActivity(intent);
+                    startActivityForResult(intent,CAMERACODE);
                 }
             }
         } );
@@ -82,7 +97,7 @@ public class foodActivity extends AppCompatActivity {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(club.hackslash.habita.foodActivity.this, "THANK YOU,PERMISSION GRANTED!!", LENGTH_SHORT).show();
                 Intent intent = new Intent(club.hackslash.habita.foodActivity.this,club.hackslash.habita.camStart.class);
-                startActivity(intent);
+                startActivityForResult(intent,CAMERACODE);
             } else if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
                 if (ActivityCompat.shouldShowRequestPermissionRationale(club.hackslash.habita.foodActivity.this, Manifest.permission.CAMERA)) {
                     AlertDialog.Builder dialog = new AlertDialog.Builder(this);
@@ -111,10 +126,53 @@ public class foodActivity extends AppCompatActivity {
             }
 
         }
+    }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == CAMERACODE && resultCode == RESULT_OK){
+            onCaptureImageResult(data);
+        }
+    }
+
+    private void onCaptureImageResult(Intent data) {
+        /* Bitmap image = (Bitmap) data.getExtras().get("result");
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        image.compress(Bitmap.CompressFormat.PNG,100,bytes);
+        byte[] bb  = bytes.toByteArray();
+         */
+        uploadToFirebase((byte[]) data.getExtras().get("result"));
 
     }
 
+    private void uploadToFirebase(byte[] bb) {
+         Random rand = new Random();
+         int randomNumber = rand.nextInt(1000000);
+         final StorageReference storePath = FirebaseStorage.getInstance().getReference().child("foodImages/"+randomNumber+".jpg");
 
+        storePath.putBytes(bb).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                Toast.makeText(foodActivity.this,"food Image is uploaded", LENGTH_SHORT);
+                storePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        final String download_url = uri.toString();
+                       Log.i("download url","Url is downloaded here ");
+                        Picasso.get().load(download_url).into(foodImage);
+                        foodImage.setVisibility(View.VISIBLE);
+                    }
+                });
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(foodActivity.this,"food Image is failed ", LENGTH_SHORT);
+
+            }
+        });
+    }
 
 }
+

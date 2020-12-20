@@ -63,6 +63,17 @@
         app:layout_constraintVertical_bias="0.04000002"
         app:srcCompat="@drawable/persontab" />
 
+    <ImageView
+        android:id="@+id/foodimage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35000002"
+        tools:srcCompat="@tools:sample/avatars" />
+
     <Button
         android:id="@+id/AskPer"
         android:layout_width="250dp"
