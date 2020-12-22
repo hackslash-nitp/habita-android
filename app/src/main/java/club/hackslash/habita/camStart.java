@@ -14,6 +14,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.firebase.storage.StorageReference;
+
+import java.io.File;
 import java.nio.charset.StandardCharsets;
 import static android.provider.MediaStore.Files.FileColumns.MEDIA_TYPE_IMAGE;
 import java.util.ArrayList;
@@ -23,8 +26,8 @@ public class camStart extends AppCompatActivity  {
     Camera camera;
     FrameLayout frameLayout;
     showCam showcam;
-
     ImageView cam_cap;
+    byte imageBytedata[];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,9 +47,11 @@ public class camStart extends AppCompatActivity  {
     cam_cap.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            if(camera != null)
-                camera.takePicture(null,null,mPictureCallBack);
-           else
+            if(camera != null) {
+                camera.takePicture(null, null, mPictureCallBack);
+
+            }
+            else
             {
                 camera.stopPreview();
                 camera.release();
@@ -55,16 +60,21 @@ public class camStart extends AppCompatActivity  {
         }
     });
     }
+
     Camera.PictureCallback mPictureCallBack = new Camera.PictureCallback() {
         @Override
         public void onPictureTaken(byte[] data, Camera camera) {
            String  s = new String(data, StandardCharsets.UTF_8);
-           Log.d("byte data",s);
+            imageBytedata = data;
+            Intent returnIntent = new Intent();
+            returnIntent.putExtra("result",imageBytedata);
+            setResult(camStart.RESULT_OK,returnIntent);
+            finish();
+            Log.d("byte data",s);
+
       }
     };
 
-
-
-    }
+}
 
 

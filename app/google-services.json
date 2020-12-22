@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1089780029586",
+    "project_id": "habita-c18f6",
+    "storage_bucket": "habita-c18f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089780029586:android:0902c85d1667b283d3ae4b",
+        "android_client_info": {
+          "package_name": "club.hackslash.habita"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089780029586-lq1nofegtgb2pv7dvvbrborod3r8i6kn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "club.hackslash.habita",
+            "certificate_hash": "b915479c03c3585599739aacf04f6eefef2aa7d2"
+          }
+        },
+        {
+          "client_id": "1089780029586-mei21hhl4mmvkf9lm9d761e65r8lf4ik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK1iFgG2WsaJncLghQwqodqiy1DgW15IU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089780029586-mei21hhl4mmvkf9lm9d761e65r8lf4ik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
